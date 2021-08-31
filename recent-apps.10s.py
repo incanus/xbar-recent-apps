@@ -49,7 +49,7 @@ with open(DB, 'r+') as f:
     apps = sorted(apps.items(), key=lambda app: app[1]['date'], reverse=True)
     for app in apps:
         f.write(app[0].strip('"') +'|' + app[1]['id'].strip('"') + '|' + app[1]['date'] +"\n")
-    print(':clock: | shortcut=CMD+OPTION+A')
+    print(':clock: | shortcut=OPTION+A')
     print('---')
     f.seek(0)
     entries = f.read().strip().split("\n")
